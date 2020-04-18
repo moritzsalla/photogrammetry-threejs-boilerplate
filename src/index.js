@@ -7,6 +7,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+import './index.css';
 import model from './models/room.glb';
 
 class App extends Component {
@@ -47,14 +48,14 @@ class App extends Component {
 
   componentDidMount() {
     var scene = new THREE.Scene();
-    scene.background = new THREE.Color('white');
     var camera = new THREE.PerspectiveCamera(
       10,
       window.innerWidth / window.innerHeight,
       1,
-      1000
+      10000
     );
-    var renderer = new THREE.WebGLRenderer({ antialias: true });
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.outputEncoding = THREE.sRGBEncoding;
 
@@ -82,7 +83,15 @@ class App extends Component {
     animate();
   }
   render() {
-    return <div ref={(ref) => (this.mount = ref)} />;
+    return (
+      <>
+        <div className="wrapper">
+          <h1>Quarantine</h1>
+        </div>
+
+        <div ref={(ref) => (this.mount = ref)} />
+      </>
+    );
   }
 }
 
