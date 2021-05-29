@@ -1,10 +1,12 @@
-# Building a model in Regard3d
+# Photogrammerty three.js Boilerplate
+
+## Building a model in Regard3d
 
 ![Image](./images/screenshot.jpg)
 
 This should take ~40 min. Duration is highly dependent on your computers performance and the amount of images you take.
 
-## Instructions
+### Instructions
 
 1. Take 20–50 pictures. When taking pictures, move by small amount around your scene. Wide angle lenses work best.
 2. Download Regard3d : https://sourceforge.net/projects/regard3d/files/latest/download
@@ -23,15 +25,15 @@ This should take ~40 min. Duration is highly dependent on your computers perform
 9. Download GLB
 10. Upload the .glb file here with your name in the title: https://drive.google.com/drive/folders/1xkkB2qXrySHoB-rO1nPJrzq1p-QvHMDm?usp=sharing.
 
-## Troubleshooting
+### Troubleshooting
 
 - If it takes too long to compute, try less images and/or less depth at the surface generation stage
 - There’s no .mtl file: you likely forgot to check „textures“ during step 5.3.
 - Contact me here: moritz.salla@hotmail.de
 
-## Running the app
+### Running the app
 
-### `yarn start`
+#### `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -39,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn build`
+#### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
